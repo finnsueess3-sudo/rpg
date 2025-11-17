@@ -1,6 +1,35 @@
-html,body{margin:0;padding:0;height:100%;background:#0f1720;}
-canvas{display:block;margin:0 auto;background:#86b27a;border:2px solid #444;}
-#ui{position:absolute;top:10px;left:10px;color:white;font-family:sans-serif;}
-#classSelect{background:#222;padding:20px;border:2px solid #fff;border-radius:10px;}
-#classSelect button{margin:5px;padding:10px 15px;background:#444;color:white;border:none;border-radius:5px;cursor:pointer;}
-#classSelect button:hover{background:#666;}
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #222;
+  color: #fff;
+}
+
+#ui {
+  position: absolute;
+  top: 5px; left: 5px;
+  z-index: 10;
+}
+
+#hud {
+  margin-top: 5px;
+}
+
+canvas {
+  display: block;
+  background: #444;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+#minimap {
+  width: 200px;
+  height: 200px;
+  bottom: 5px;
+  right: 5px;
+  position: absolute;
+  border: 2px solid #fff;
+  background: #000;
+  z-index: 20;
+}
