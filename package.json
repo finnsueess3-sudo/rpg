@@ -1,7 +1,7 @@
 {
   "name": "multiplayer-2d-arena",
   "version": "1.0.0",
-  "description": "2D Multiplayer Battle Game",
+  "description": "2D Multiplayer Battle Game with classes and ultimates",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
