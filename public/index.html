@@ -2,26 +2,32 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2D Multiplayer Arena</title>
+<title>Multiplayer RPG</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<canvas id="game" width="960" height="640" tabindex="0"></canvas>
 <div id="ui">
-  <div id="classSelect">
-    <h2>Wähle deine Klasse</h2>
-    <button onclick="chooseClass('ninja')">Ninja</button>
-    <button onclick="chooseClass('mage')">Magier</button>
-    <button onclick="chooseClass('warrior')">Krieger</button>
-    <button onclick="chooseClass('archer')">Bogenschütze</button>
-    <button onclick="chooseClass('dragon')">Drachen</button>
-    <button onclick="chooseClass('rogue')">Rogue</button>
-    <button onclick="chooseClass('paladin')">Paladin</button>
-    <button onclick="chooseClass('berserker')">Berserker</button>
-    <button onclick="chooseClass('assassin')">Assassin</button>
+  <select id="classSelect">
+    <option value="ninja">Ninja</option>
+    <option value="mage">Mage</option>
+    <option value="warrior">Krieger</option>
+    <option value="archer">Bogenschütze</option>
+    <option value="paladin">Paladin</option>
+    <option value="rogue">Rogue</option>
+    <option value="cleric">Cleric</option>
+    <option value="berserker">Berserker</option>
+    <option value="dragon">Drachen</option>
+  </select>
+  <input id="playerName" placeholder="Name">
+  <button id="spawnBtn">Spawn</button>
+  <div id="hud">
+    <span id="hp">HP: 0</span>
+    <span id="level">Level: 0</span>
+    <span id="xp">XP: 0</span>
   </div>
 </div>
+<canvas id="gameCanvas"></canvas>
+<canvas id="minimap"></canvas>
 <script src="/socket.io/socket.io.js"></script>
 <script src="scripts.js"></script>
 </body>
