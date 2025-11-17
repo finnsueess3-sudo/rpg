@@ -3,34 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>2D MMO — Multiplayer Demo</title>
-  <link rel="stylesheet" href="/scripts.css">
+  <title>2D MMO Pro — Multiplayer</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <div id="topbar">
-    <div class="panel">Multiplayer Arena — mittelgroße Map — 5-20 Spieler</div>
-    <div class="panel">WASD bewegen — Leertaste angreifen — Wähle Klasse im Client</div>
+    <div class="panel">2D MMO Pro — Multiplayer (Pro) — WASD bewegen, Leertaste angreifen</div>
+    <div class="panel">5–20 Spieler empfohlen — wähle Klasse (einmalig)</div>
   </div>
 
-  <canvas id="game" width="960" height="640" tabindex="0"></canvas>
+  <canvas id="game" width="1024" height="720" tabindex="0"></canvas>
 
-  <div id="hud" class="panel" style="position:fixed;left:12px;bottom:12px;">
+  <div id="hud" class="panel">
     <div id="hud-class">Klasse: -</div>
     <div id="hud-hp">HP: -</div>
-    <div id="hud-xp">XP: -</div>
+    <div id="hud-xp">Level / XP: -</div>
     <div id="hud-info">Verbinde...</div>
   </div>
 
-  <!-- class selection quick buttons -->
-  <div id="classbar" class="panel" style="position:fixed;right:12px;bottom:12px;">
+  <div id="classbar" class="panel">
     <button data-class="ninja">Ninja</button>
     <button data-class="mage">Magier</button>
     <button data-class="warrior">Krieger</button>
     <button data-class="archer">Bogenschütze</button>
-    <div style="font-size:12px;margin-top:6px;color:#9bd">Klick eine Klasse, dann Klick das Canvas</div>
+    <button data-class="paladin">Paladin</button>
+    <button data-class="rogue">Rogue</button>
+    <button data-class="cleric">Cleric</button>
+    <button data-class="berserker">Berserker</button>
+    <div class="small">Klicke eine Klasse (einmalig), dann ins Canvas & spiele.</div>
   </div>
 
+  <!-- minimap canvas -->
+  <canvas id="minimap" width="200" height="200" class="panel"></canvas>
+
   <script src="/socket.io/socket.io.js"></script>
-  <script src="/scripts.js"></script>
+  <script src="/game.js"></script>
 </body>
 </html>
