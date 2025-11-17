@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2D MMO — Multiplayer Demo</title>
+  <link rel="stylesheet" href="/scripts.css">
+</head>
+<body>
+  <div id="topbar">
+    <div class="panel">Multiplayer Arena — mittelgroße Map — 5-20 Spieler</div>
+    <div class="panel">WASD bewegen — Leertaste angreifen — Wähle Klasse im Client</div>
+  </div>
+
+  <canvas id="game" width="960" height="640" tabindex="0"></canvas>
+
+  <div id="hud" class="panel" style="position:fixed;left:12px;bottom:12px;">
+    <div id="hud-class">Klasse: -</div>
+    <div id="hud-hp">HP: -</div>
+    <div id="hud-xp">XP: -</div>
+    <div id="hud-info">Verbinde...</div>
+  </div>
+
+  <!-- class selection quick buttons -->
+  <div id="classbar" class="panel" style="position:fixed;right:12px;bottom:12px;">
+    <button data-class="ninja">Ninja</button>
+    <button data-class="mage">Magier</button>
+    <button data-class="warrior">Krieger</button>
+    <button data-class="archer">Bogenschütze</button>
+    <div style="font-size:12px;margin-top:6px;color:#9bd">Klick eine Klasse, dann Klick das Canvas</div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/scripts.js"></script>
+</body>
+</html>
