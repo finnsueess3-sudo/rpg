@@ -1,11 +1,6 @@
-/* public/style.css */
-html,body{height:100%;margin:0;background:#0f1720;color:#e6eef6;font-family:Inter,system-ui,Arial}
-#topbar{display:flex;gap:12px;padding:10px;align-items:center;justify-content:space-between;max-width:1200px;margin:8px auto}
-.panel{background:linear-gradient(180deg,#0d1620,#14202b);padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);color:#cfe8d7}
-canvas#game{display:block;margin:8px auto;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.6);background:#86b27a}
-#hud{position:fixed;left:12px;bottom:12px;min-width:200px;padding:8px 12px}
-#classbar{position:fixed;right:12px;bottom:12px;padding:10px}
-#classbar button{display:inline-block;margin:4px;padding:6px 8px;background:#17353a;border-radius:6px;border:none;color:#dff;cursor:pointer}
-#minimap{position:fixed;right:12px;top:12px;border-radius:8px}
-.small{font-size:12px;color:#9bd;margin-top:6px}
-button:active{transform:translateY(1px)}
+html,body{margin:0;padding:0;height:100%;background:#0f1720;}
+canvas{display:block;margin:0 auto;background:#86b27a;border:2px solid #444;}
+#ui{position:absolute;top:10px;left:10px;color:white;font-family:sans-serif;}
+#classSelect{background:#222;padding:20px;border:2px solid #fff;border-radius:10px;}
+#classSelect button{margin:5px;padding:10px 15px;background:#444;color:white;border:none;border-radius:5px;cursor:pointer;}
+#classSelect button:hover{background:#666;}
