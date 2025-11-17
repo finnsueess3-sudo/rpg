@@ -1,42 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>2D MMO Pro — Multiplayer</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2D Multiplayer Battle</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="topbar">
-    <div class="panel">2D MMO Pro — Multiplayer (Pro) — WASD bewegen, Leertaste angreifen</div>
-    <div class="panel">5–20 Spieler empfohlen — wähle Klasse (einmalig)</div>
+<canvas id="game" width="960" height="640" tabindex="0"></canvas>
+<div id="ui">
+  <div id="classSelect">
+    <h2>Wähle deine Klasse</h2>
+    <button onclick="chooseClass('ninja')">Ninja</button>
+    <button onclick="chooseClass('mage')">Magier</button>
+    <button onclick="chooseClass('warrior')">Krieger</button>
+    <button onclick="chooseClass('archer')">Bogenschütze</button>
+    <button onclick="chooseClass('dragon')">Drachen</button>
+    <button onclick="chooseClass('rogue')">Rogue</button>
   </div>
-
-  <canvas id="game" width="1024" height="720" tabindex="0"></canvas>
-
-  <div id="hud" class="panel">
-    <div id="hud-class">Klasse: -</div>
-    <div id="hud-hp">HP: -</div>
-    <div id="hud-xp">Level / XP: -</div>
-    <div id="hud-info">Verbinde...</div>
-  </div>
-
-  <div id="classbar" class="panel">
-    <button data-class="ninja">Ninja</button>
-    <button data-class="mage">Magier</button>
-    <button data-class="warrior">Krieger</button>
-    <button data-class="archer">Bogenschütze</button>
-    <button data-class="paladin">Paladin</button>
-    <button data-class="rogue">Rogue</button>
-    <button data-class="cleric">Cleric</button>
-    <button data-class="berserker">Berserker</button>
-    <div class="small">Klicke eine Klasse (einmalig), dann ins Canvas & spiele.</div>
-  </div>
-
-  <!-- minimap canvas -->
-  <canvas id="minimap" width="200" height="200" class="panel"></canvas>
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/game.js"></script>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
